@@ -1,0 +1,68 @@
+colorscheme wombat256 
+
+set nu
+set ai
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set hidden
+
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+" Zen Coding remapping
+let g:user_zen_expandabbr_key='<C-e>'
+
+" CommandT mapping
+:nmap <C-t> :CommandT<CR>
+:imap <C-t> <Esc>:CommandT<CR>
+
+" NERDTree mapping
+:nmap <C-a> :NERDTreeToggle<CR>
+:imap <C-a> <Esc>:NERDTreeToggle<CR>
+
+" Left and Right keys change line
+set whichwrap+=<,>,[,]
+
+" Tabs mappings
+:nmap <C-S-tab> :bprevious<CR>
+:nmap <C-tab> :bnext<CR>
+:map <C-S-tab> :bprevious<CR>
+:map <C-tab> :bnext<CR>
+:imap <C-S-tab> <Esc>:bprevious<CR>i
+:imap <C-tab> <Esc>:bnext<CR>i
+:nmap <C-w> :bdelete<CR>
+:imap <C-w> <Esc>:bdelete<CR>
+":nmap <C-t> :tabnew<CR>
+":imap <C-t> <Esc>:tabnew<CR>
+
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
+
+" " CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
+
+" " CTRL-V and SHIFT-Insert are Paste
+map <C-V>   "+gP
+map <S-Insert>  "+gP
+
+cmap <C-V>gP  <C-R>+
+cmap <S-Insert> <C-R>+
+
+" " Pasting blockwise and linewise selections is not possible in Insert and
+" " Visual mode without the +virtualedit feature.  They are pasted as if they
+" " were characterwise instead.
+" " Uses the paste.vim autoload script.
+
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+imap <S-Insert> <C-V>
+vmap <S-Insert> <C-V>
+
+"     " Use CTRL-Q to do what CTRL-V used to do
+noremap <C-Q>   <C-V>
