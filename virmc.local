@@ -1,6 +1,7 @@
 colorscheme wombat256 
 
 set nu
+set mouse=a
 set ai
 set softtabstop=2
 set shiftwidth=2
@@ -12,8 +13,16 @@ set hidden
 filetype plugin on
 filetype indent on
 
+" CTRL+S = save
+:nmap <C-s> :w!<CR>
+
 " Zen Coding remapping
 let g:user_zen_expandabbr_key='<C-e>'
+":imap <C-d> <C-y><S-d>
+:nmap <C-d> <C-y><S-d>
+:nmap <C-S-d> <C-Y>d
+":imap <C-S-d> <C-Y>d
+":nmap <C-d> <C-y>d
 
 " CommandT mapping
 :nmap <C-t> :CommandT<CR>

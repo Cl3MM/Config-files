@@ -33,9 +33,11 @@ if [[ -n "$PS1" ]]; then
   if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 fi
 
-alias ll="ls -lh"
-alias lla="ls -lah"
+alias ll="ls -lhX"
+alias lla="ls -lahX"
 alias s="cd .."
 alias df="df -h"
 alias du="du -h"
-alias rh="rvm --default use 1.9.2"
+alias rh="rvm --default use 1.9.2-head"
+alias bc='cd /var/www/bilanCarbone'
+alias c="clear"
