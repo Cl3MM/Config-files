@@ -41,3 +41,5 @@ alias du="du -h"
 alias rh="rvm --default use 1.9.2-head"
 alias bc='cd /var/www/bilanCarbone'
 alias c="clear"
+alias di="cd /var/www/daily\#intake"
+alias au="sudo aptitude update && sudo aptitude safe-upgrade"

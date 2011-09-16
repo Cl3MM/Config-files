@@ -9,6 +9,13 @@ set tabstop=2
 set expandtab
 set hidden
 
+" ; = . (redo last action)
+:noremap ; .
+
+" Ragtag mapping
+"  Close last HTML tag
+:imap <C-q> <C-X>/
+
 " Enable filetype plugin
 filetype plugin on
 filetype indent on
@@ -74,4 +81,4 @@ imap <S-Insert> <C-V>
 vmap <S-Insert> <C-V>
 
 "     " Use CTRL-Q to do what CTRL-V used to do
-noremap <C-Q>   <C-V>
+"noremap <C-Q>   <C-V>
